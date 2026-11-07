@@ -7,7 +7,6 @@ affiliation: Department of Mathematics and Computer Science, Royal Military
   College of Canada, Kingston
 affiliation_url: https://www.rmc-cmr.ca/en/mathematics-and-computer-science
 portrait: /img/portrait.jpg
-cv: /pdf/cv-Sadeghi.pdf
 google_scholar: https://scholar.google.com/citations?user=fgMe6FAAAAAJ&hl=en
 orcid: https://orcid.org/0000-0002-0055-6493
 email: sadeghi@rmc.ca
@@ -19,6 +18,7 @@ interests:
 education:
   - degree: PhD in Applied Mathematics (Operations Research), 2018
     institution: Kharazmi University, Tehran
+hide_contact: false
 contact:
   email_display: sadeghi at rmc dot ca
   department: Department of Mathematics and Computer Science, Royal Military
