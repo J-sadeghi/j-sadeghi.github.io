@@ -12,5 +12,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto+Mono">
   <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
   <link rel="icon" type="image/png" href="{{ '/img/icon.png' | relative_url }}">
+  {% if page.hide %}<meta name="robots" content="noindex">{% endif %}
   <title>{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
 </head>

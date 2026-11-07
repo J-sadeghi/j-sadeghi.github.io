@@ -1,8 +1,9 @@
+{% assign n = 0 %}
 <table>
-{% for item in include.items %}
+{% for item in include.items %}{% unless item.hide %}{% assign n = n | plus: 1 %}
 <tr valign="top">
-<td align="right" class="bibtexnumber">[{{ forloop.index }}]</td>
+<td align="right" class="bibtexnumber">[{{ n }}]</td>
 <td class="bibtexitem">{% include bibitem.html item=item %}</td>
 </tr>
-{% endfor %}
+{% endunless %}{% endfor %}
 </table>

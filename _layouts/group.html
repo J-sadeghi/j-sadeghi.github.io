@@ -2,12 +2,13 @@
 layout: page
 ---
 {% assign g = site.data.group %}
-<h2 id="current">Current Members</h2>
+{% capture current %}
 {% for section in g.sections %}
-{% if section.members and section.members.size > 0 %}
+{% assign members = section.members | where_exp: "m", "m.hide != true" %}
+{% if section.hide != true and members.size > 0 %}
 <h3>{{ section.heading }}</h3>
 <table>
-{% for m in section.members %}
+{% for m in members %}
 <tr valign="top">
 <td align="right" class="bibtexnumber">[{{ forloop.index }}]</td>
 <td class="bibtexitem">{{ m.name }}{% if m.degree and m.degree != "" %} ({{ m.degree }}){% endif %}.{% if m.project and m.project != "" %} <em>{{ m.project }}</em>.{% endif %}{% if m.details and m.details != "" %} {{ m.details }}.{% endif %}</td>
@@ -16,10 +17,16 @@ layout: page
 </table>
 {% endif %}
 {% endfor %}
-{% if g.alumni and g.alumni.size > 0 %}
+{% endcapture %}
+{% if current contains "<table>" %}
+<h2 id="current">Current Members</h2>
+{{ current }}
+{% endif %}
+{% assign alumni = g.alumni | where_exp: "m", "m.hide != true" %}
+{% if alumni.size > 0 %}
 <h2 id="alumni">Former Members</h2>
 <table>
-{% for m in g.alumni %}
+{% for m in alumni %}
 <tr valign="top">
 <td align="right" class="bibtexnumber">[{{ forloop.index }}]</td>
 <td class="bibtexitem">{{ m.name }}{% if m.degree and m.degree != "" %} ({{ m.degree }}){% endif %}.{% if m.project and m.project != "" %} <em>{{ m.project }}</em>.{% endif %}{% if m.details and m.details != "" %} {{ m.details }}.{% endif %}</td>

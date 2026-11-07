@@ -3,7 +3,16 @@
 
 {% include navbar.html %}
 
+{% if page.hide %}
+<article class="article">
+  <div class="article-container">
+    <h1>Page not found</h1>
+    <p>The page you requested doesn't exist. Go back to the <a href="{{ '/' | relative_url }}">home page</a>.</p>
+  </div>
+</article>
+{% else %}
 {{ content }}
+{% endif %}
 
 {% include footer.html %}
 </body>
