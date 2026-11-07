@@ -14,10 +14,10 @@ extra_links:
     icon: fa-university
     url: https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-jafar-sadeghi
 interests:
-  - Efficiency and productivity analysis (including capacity measurement)
-  - Nonconvex production frontiers
+  - "Efficiency and productivity analysis "
+  - Nonconvex production modeling
   - Mathematical programming and optimization algorithms
-  - OR and data analytics for logistics
+  - "OR and data analytics "
 education:
   - degree: PhD in Applied Mathematics (Operations Research), 2018
     institution: Kharazmi University, Tehran
@@ -35,10 +35,14 @@ Summary Profile:
 - Applied mathematician and operations researcher with broad teaching and research experience.
 - Former postdoctoral fellow at the Ivey Business School (Western University) and at IESEG School of Management (Lille), and lecturer at the Edwards School of Business (University of Saskatchewan).
 - Main research specialties:
-  - Efficiency and productivity measurement (Data Envelopment Analysis, benchmarking, ranking and target setting);
-  - Nonconvex production technologies, plant capacity and scale economies;
-  - Mathematical programming (linear, nonlinear, mixed-integer, bilevel and multi-objective optimization); and
-  - Operations research and data analytics for logistics.
-- Applications: banking, electricity, fisheries, agriculture, health care and defence logistics.
-- Main co-authors: K. Kerstens (CNRS-LEM, Lille), I. Van de Woestyne (KU Leuven), M.A. Begen and F. Ødegaard (Ivey Business School).
+  - Efficiency and productivity analysis: Data Envelopment Analysis, benchmarking, ranking and target setting;
+  - Nonconvex production modeling, plant capacity, scale economies and cost and revenue functions;
+  - Mathematical optimization: linear, nonlinear, mixed-integer, bilevel, and multi-objective programming;
+  - Data analytics and decision support**:** data-driven modelling and machine-learning-assisted optimization applications.
+- Applications: banking, electricity, fisheries, agriculture and health care.
+- Main co-authors: [K. Kerstens](https://kkerstens.github.io/) (CNRS-LEM, Lille), I. Van de Woestyne (KU Leuven), [M.A. Begen](https://www.ivey.uwo.ca/faculty/directory/mehmet-begen/) and [F. Ødegaard](https://www.ivey.uwo.ca/faculty/directory/fredrik-odegaard/) (Ivey Business School).
+
+### Prospective Students
+
+I have several open positions for motivated students in efficiency and productivity analysis, optimization, and operations research applications. Interested students are welcome to email me their CV and a short note on their research interests.
 
