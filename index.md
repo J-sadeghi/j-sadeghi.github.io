@@ -4,7 +4,7 @@ title: Home
 job_title: Assistant Professor of Mathematics & Operations Research
 affiliation: Department of Mathematics and Computer Science, Royal Military
   College of Canada, Kingston
-affiliation_url: https://www.rmc-cmr.ca/en/mathematics-and-computer-science
+affiliation_url: "https://www.rmc-cmr.ca/en/mathematics-and-computer-science "
 portrait: /img/portrait-1.jpg
 google_scholar: https://scholar.google.com/citations?user=fgMe6FAAAAAJ&hl=en
 orcid: https://orcid.org/0000-0002-0055-6493
