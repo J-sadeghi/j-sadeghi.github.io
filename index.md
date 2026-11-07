@@ -40,7 +40,7 @@ Summary Profile:
   - Mathematical optimization: linear, nonlinear, mixed-integer, bilevel, and multi-objective programming;
   - Data analytics and decision support**:** data-driven modelling and machine-learning-assisted optimization applications.
 - Applications: banking, electricity, fisheries, agriculture and health care.
-- Main co-authors: [K. Kerstens](https://kkerstens.github.io/) (CNRS-LEM, Lille), I. Van de Woestyne (KU Leuven), [M.A. Begen](https://www.ivey.uwo.ca/faculty/directory/mehmet-begen/) and [F. Ødegaard](https://www.ivey.uwo.ca/faculty/directory/fredrik-odegaard/) (Ivey Business School).
+- Main co-authors: [K. Kerstens](https://kkerstens.github.io/) (CNRS-LEM, Lille), I. Van de Woestyne (KU Leuven), [M.A. Begen](https://www.ivey.uwo.ca/faculty_research/directory/mehmet-begen/) and [F. Ødegaard](https://www.ivey.uwo.ca/faculty_research/directory/fredrik-odegaard/) (Ivey Business School).
 
 ### Prospective Students
 
