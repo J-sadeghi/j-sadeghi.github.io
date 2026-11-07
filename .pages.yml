@@ -49,8 +49,8 @@ content:
   - name: title
     type: string
     hidden: true
-  - name: name
-    label: Name
+  - name: full_name
+    label: Name (shown under your photo)
     type: string
   - name: job_title
     label: Job title
@@ -101,6 +101,7 @@ content:
       type: select
       options:
         values:
+        - fa-university
         - ai-google-scholar
         - ai-orcid
         - ai-researchgate
