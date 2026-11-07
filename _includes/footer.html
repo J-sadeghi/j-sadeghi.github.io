@@ -1,15 +1,15 @@
 <footer class="site-footer">
   <div class="container">
-    <p class="powered-by">
-      &copy; {{ site.copyright_start }} {{ site.title }}. Latest update: {{ site.time | date: "%B %Y" }} &middot;
+    {% assign S = site.data.settings %}<p class="powered-by">
+      {{ S.copyright_text | default: site.title }}{% if S.show_latest_update %}. Latest update: {{ site.time | date: "%B %Y" }}{% endif %}{% if S.show_theme_credit %} &middot;
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-      <span class="pull-right" aria-hidden="true">
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.{% endif %}
+      {% if S.show_back_to_top %}<span class="pull-right" aria-hidden="true">
         <a href="#" id="back_to_top">
           <span class="button_icon"><i class="fa fa-chevron-up fa-2x"></i></span>
         </a>
-      </span>
+      </span>{% endif %}
     </p>
   </div>
 </footer>

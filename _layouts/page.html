@@ -4,9 +4,9 @@ layout: default
 <article class="article" itemscope itemtype="http://schema.org/Article">
   <div class="article-container">
     <h1 itemprop="name">{{ page.title }}</h1>
-    <div class="article-metadata">
+    {% if site.data.settings.show_page_dates and page.hide_date != true %}<div class="article-metadata">
       <span class="article-date">Last updated: {{ site.time | date: "%b %-d, %Y" }}</span>
-    </div>
+    </div>{% endif %}
     <div class="article-style" itemprop="articleBody">
 {{ content }}
     </div>
