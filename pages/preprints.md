@@ -1,5 +1,6 @@
 ---
 title: Preprints
+hide: true
 layout: publications
 sections:
   - heading: Submitted Papers and Working Papers
