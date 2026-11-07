@@ -4,6 +4,39 @@ media:
   input: img
   output: /img
 content:
+- name: settings
+  label: Site settings
+  type: file
+  path: _data/settings.yml
+  format: yaml
+  fields:
+  - name: site_name
+    label: Site name (top-left of the menu bar and browser tab)
+    type: string
+  - name: description
+    label: Short site description (for search engines)
+    type: string
+  - name: favicon
+    label: Browser tab icon (small square image)
+    type: image
+  - name: accent_color
+    label: 'Link colour (e.g. #0095eb)'
+    type: string
+  - name: copyright_text
+    label: Footer text (e.g. © 2026 Jafar Sadeghi)
+    type: string
+  - name: show_latest_update
+    label: 'Footer: show "Latest update" month'
+    type: boolean
+  - name: show_theme_credit
+    label: 'Footer: show "Powered by the Academic theme"'
+    type: boolean
+  - name: show_back_to_top
+    label: 'Footer: show the back-to-top arrow'
+    type: boolean
+  - name: show_page_dates
+    label: Show "Last updated" date on pages
+    type: boolean
 - name: home
   label: Home page
   type: file
@@ -34,6 +67,12 @@ content:
   - name: cv
     label: CV (PDF)
     type: file
+  - name: cv_prefix
+    label: 'Text before the CV link (default: Complete)'
+    type: string
+  - name: cv_label
+    label: 'CV link text (default: Curriculum Vitae)'
+    type: string
   - name: google_scholar
     label: Google Scholar link
     type: string
@@ -49,15 +88,58 @@ content:
   - name: email
     label: E-mail address (for the envelope icon)
     type: string
+  - name: extra_links
+    label: More profile links (icons under your photo)
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Name (e.g. Scopus)
+      type: string
+    - name: icon
+      label: Icon
+      type: select
+      options:
+        values:
+        - ai-google-scholar
+        - ai-orcid
+        - ai-researchgate
+        - ai-semantic-scholar
+        - ai-dblp
+        - ai-arxiv
+        - ai-publons
+        - ai-researcherid
+        - ai-ideas-repec
+        - ai-mendeley
+        - ai-cv
+        - fa-linkedin
+        - fa-github
+        - fa-twitter
+        - fa-globe
+        - fa-file-pdf-o
+        - fa-envelope
+        - fa-youtube
+    - name: url
+      label: Link (full web address)
+      type: string
+  - name: bio_heading
+    label: 'Biography heading (default: Short Biography)'
+    type: string
   - name: body
     label: Short biography
     type: rich-text
     options:
       format: markdown
+  - name: interests_heading
+    label: 'Interests heading (default: Interests)'
+    type: string
   - name: interests
     label: Interests
     type: string
     list: true
+  - name: education_heading
+    label: 'Education heading (default: Education)'
+    type: string
   - name: education
     label: Education
     type: object
@@ -69,6 +151,12 @@ content:
     - name: institution
       label: Institution
       type: string
+  - name: contact_heading
+    label: 'Contact heading (default: Contact)'
+    type: string
+  - name: hide_contact
+    label: Hide the whole Contact section
+    type: boolean
   - name: contact
     label: Contact section
     type: object
@@ -84,6 +172,28 @@ content:
       type: string
     - name: hours
       label: Office hours / availability
+      type: string
+  - name: extra_contact
+    label: More contact lines
+    type: object
+    list: true
+    fields:
+    - name: icon
+      label: Icon
+      type: select
+      options:
+        values:
+        - fa-envelope
+        - fa-phone
+        - fa-map-marker
+        - fa-university
+        - fa-clock-o
+        - fa-building
+        - fa-globe
+        - fa-skype
+        - fa-info-circle
+    - name: text
+      label: Text
       type: string
 - name: articles
   label: Journal articles
@@ -223,6 +333,9 @@ content:
   path: _data/group.yml
   format: yaml
   fields:
+  - name: current_heading
+    label: 'Heading for current members (default: Current Members)'
+    type: string
   - name: sections
     label: Current members (by level)
     type: object
@@ -255,6 +368,9 @@ content:
     - name: hide
       label: Hide this whole level
       type: boolean
+  - name: alumni_heading
+    label: 'Heading for former members (default: Former Members)'
+    type: string
   - name: alumni
     label: Former members
     type: object
@@ -290,18 +406,34 @@ content:
   - name: hide
     label: Hide this page from website (keeps it saved here)
     type: boolean
+  - name: hide_date
+    label: Hide the "Last updated" date on this page
+    type: boolean
   - name: layout
-    type: string
-    hidden: true
+    type: select
+    label: Page type
+    options:
+      values:
+      - page
+      - publications
+      - group
   - name: sections
     type: object
     list: true
-    hidden: true
     fields:
     - name: heading
+      label: Section heading
       type: string
     - name: data
-      type: string
+      label: Which list
+      type: select
+      options:
+        values:
+        - articles
+        - preprints
+        - conferences
+        - seminars
+    label: Publication lists shown on this page (only for publication pages)
   - name: footer_note
     label: Note at the bottom (optional)
     type: string
