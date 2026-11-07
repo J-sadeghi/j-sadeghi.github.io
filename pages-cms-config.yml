@@ -1,0 +1,326 @@
+# Pages CMS configuration (https://pagescms.org)
+# Defines the editing forms you see at app.pagescms.org
+media:
+  input: img
+  output: /img
+content:
+- name: home
+  label: Home page
+  type: file
+  path: index.md
+  format: yaml-frontmatter
+  fields:
+  - name: layout
+    type: string
+    hidden: true
+  - name: title
+    type: string
+    hidden: true
+  - name: name
+    label: Name
+    type: string
+  - name: job_title
+    label: Job title
+    type: string
+  - name: affiliation
+    label: Affiliation (shown under your name)
+    type: string
+  - name: affiliation_url
+    label: Affiliation web address
+    type: string
+  - name: portrait
+    label: Photo (square works best)
+    type: image
+  - name: cv
+    label: CV (PDF)
+    type: file
+  - name: google_scholar
+    label: Google Scholar link
+    type: string
+  - name: orcid
+    label: ORCID link
+    type: string
+  - name: researchgate
+    label: ResearchGate link (optional)
+    type: string
+  - name: linkedin
+    label: LinkedIn link (optional)
+    type: string
+  - name: email
+    label: E-mail address (for the envelope icon)
+    type: string
+  - name: body
+    label: Short biography
+    type: rich-text
+    options:
+      format: markdown
+  - name: interests
+    label: Interests
+    type: string
+    list: true
+  - name: education
+    label: Education
+    type: object
+    list: true
+    fields:
+    - name: degree
+      label: Degree and year
+      type: string
+    - name: institution
+      label: Institution
+      type: string
+  - name: contact
+    label: Contact section
+    type: object
+    fields:
+    - name: email_display
+      label: E-mail as shown (e.g. name at rmc dot ca)
+      type: string
+    - name: department
+      label: Department
+      type: string
+    - name: address
+      label: Address
+      type: string
+    - name: hours
+      label: Office hours / availability
+      type: string
+- name: articles
+  label: Journal articles
+  type: file
+  path: _data/articles.yml
+  format: yaml
+  list: true
+  fields:
+  - name: authors
+    label: Authors (e.g. K. Kerstens
+    J. Sadeghi: null
+    and X. Tao): null
+    type: string
+    required: true
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: venue
+    label: Journal / conference (shown in italics)
+    type: string
+  - name: details
+    label: Volume(issue):pages, place, or status
+    type: string
+  - name: year
+    label: Year (or date)
+    type: string
+  - name: note
+    label: Note (e.g. Forthcoming)
+    type: string
+  - name: link
+    label: Link / DOI (optional
+    full web address): null
+    type: string
+- name: preprints
+  label: Preprints
+  type: file
+  path: _data/preprints.yml
+  format: yaml
+  list: true
+  fields:
+  - name: authors
+    label: Authors (e.g. K. Kerstens
+    J. Sadeghi: null
+    and X. Tao): null
+    type: string
+    required: true
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: venue
+    label: Journal / conference (shown in italics)
+    type: string
+  - name: details
+    label: Volume(issue):pages, place, or status
+    type: string
+  - name: year
+    label: Year (or date)
+    type: string
+  - name: note
+    label: Note (e.g. Forthcoming)
+    type: string
+  - name: link
+    label: Link / DOI (optional
+    full web address): null
+    type: string
+- name: conferences
+  label: Conference presentations
+  type: file
+  path: _data/conferences.yml
+  format: yaml
+  list: true
+  fields:
+  - name: authors
+    label: Authors (e.g. K. Kerstens
+    J. Sadeghi: null
+    and X. Tao): null
+    type: string
+    required: true
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: venue
+    label: Journal / conference (shown in italics)
+    type: string
+  - name: details
+    label: Volume(issue):pages, place, or status
+    type: string
+  - name: year
+    label: Year (or date)
+    type: string
+  - name: note
+    label: Note (e.g. Forthcoming)
+    type: string
+  - name: link
+    label: Link / DOI (optional
+    full web address): null
+    type: string
+- name: seminars
+  label: Invited seminars
+  type: file
+  path: _data/seminars.yml
+  format: yaml
+  list: true
+  fields:
+  - name: authors
+    label: Authors (e.g. K. Kerstens
+    J. Sadeghi: null
+    and X. Tao): null
+    type: string
+    required: true
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: venue
+    label: Journal / conference (shown in italics)
+    type: string
+  - name: details
+    label: Volume(issue):pages, place, or status
+    type: string
+  - name: year
+    label: Year (or date)
+    type: string
+  - name: note
+    label: Note (e.g. Forthcoming)
+    type: string
+  - name: link
+    label: Link / DOI (optional
+    full web address): null
+    type: string
+- name: group
+  label: Research group
+  type: file
+  path: _data/group.yml
+  format: yaml
+  fields:
+  - name: sections
+    label: Current members (by level)
+    type: object
+    list: true
+    fields:
+    - name: heading
+      label: Heading (e.g. Graduate Students)
+      type: string
+    - name: members
+      label: Members
+      type: object
+      list: true
+      fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: degree
+        label: Degree (e.g. MSc
+        PhD): null
+        type: string
+      - name: project
+        label: Project title
+        type: string
+      - name: details
+        label: Funding / years / other details
+        type: string
+  - name: alumni
+    label: Former members
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: Name
+      type: string
+      required: true
+    - name: degree
+      label: Degree (e.g. MSc
+      PhD): null
+      type: string
+    - name: project
+      label: Project title
+      type: string
+    - name: details
+      label: Funding / years / other details
+      type: string
+- name: pages
+  label: Pages (text pages)
+  type: collection
+  path: pages
+  format: yaml-frontmatter
+  filename: '{slug}.md'
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: layout
+    type: string
+    hidden: true
+  - name: sections
+    type: object
+    list: true
+    hidden: true
+    fields:
+    - name: heading
+      type: string
+    - name: data
+      type: string
+  - name: footer_note
+    label: Note at the bottom (optional)
+    type: string
+  - name: body
+    label: Page text
+    type: rich-text
+    options:
+      format: markdown
+- name: navigation
+  label: Menu
+  type: file
+  path: _data/navigation.yml
+  format: yaml
+  list: true
+  fields:
+  - name: title
+    label: Menu label
+    type: string
+  - name: url
+    label: Link (e.g. /post/courses/ ; leave empty for a drop-down)
+    type: string
+  - name: children
+    label: Drop-down items
+    type: object
+    list: true
+    fields:
+    - name: title
+      label: Label
+      type: string
+    - name: url
+      label: Link (e.g. /post/articles/)
+      type: string
