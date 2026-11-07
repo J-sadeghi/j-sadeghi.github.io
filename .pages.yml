@@ -118,6 +118,9 @@ content:
     label: Link / DOI (optional
     full web address): null
     type: string
+  - name: hide
+    label: Hide from website (keeps it saved here)
+    type: boolean
 - name: preprints
   label: Preprints
   type: file
@@ -151,6 +154,9 @@ content:
     label: Link / DOI (optional
     full web address): null
     type: string
+  - name: hide
+    label: Hide from website (keeps it saved here)
+    type: boolean
 - name: conferences
   label: Conference presentations
   type: file
@@ -184,6 +190,9 @@ content:
     label: Link / DOI (optional
     full web address): null
     type: string
+  - name: hide
+    label: Hide from website (keeps it saved here)
+    type: boolean
 - name: seminars
   label: Invited seminars
   type: file
@@ -217,6 +226,9 @@ content:
     label: Link / DOI (optional
     full web address): null
     type: string
+  - name: hide
+    label: Hide from website (keeps it saved here)
+    type: boolean
 - name: group
   label: Research group
   type: file
@@ -250,6 +262,12 @@ content:
       - name: details
         label: Funding / years / other details
         type: string
+      - name: hide
+        label: Hide from website (keeps it saved here)
+        type: boolean
+    - name: hide
+      label: Hide this whole level
+      type: boolean
   - name: alumni
     label: Former members
     type: object
@@ -269,6 +287,9 @@ content:
     - name: details
       label: Funding / years / other details
       type: string
+    - name: hide
+      label: Hide from website (keeps it saved here)
+      type: boolean
 - name: pages
   label: Pages (text pages)
   type: collection
@@ -280,6 +301,9 @@ content:
     label: Page title
     type: string
     required: true
+  - name: hide
+    label: Hide this page from website (keeps it saved here)
+    type: boolean
   - name: layout
     type: string
     hidden: true
@@ -313,6 +337,9 @@ content:
   - name: url
     label: Link (e.g. /post/courses/ ; leave empty for a drop-down)
     type: string
+  - name: hide
+    label: Hide this menu item
+    type: boolean
   - name: children
     label: Drop-down items
     type: object
@@ -324,3 +351,6 @@ content:
     - name: url
       label: Link (e.g. /post/articles/)
       type: string
+    - name: hide
+      label: Hide this item
+      type: boolean
