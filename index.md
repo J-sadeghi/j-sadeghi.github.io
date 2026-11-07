@@ -31,9 +31,9 @@ contact:
 ---
 Summary Profile:
 
-- Assistant Professor in the Department of Mathematics and Computer Science at the "Royal Military College of Canada" (RMC), Kingston, Ontario.
+- Assistant Professor in the Department of Mathematics and Computer Science at the [Royal Military College of Canada](https://www.rmc-cmr.ca/en) (RMC), Kingston, Ontario.
 - Applied mathematician and operations researcher with broad teaching and research experience.
-- Former postdoctoral fellow at the Ivey Business School (Western University) and at IESEG School of Management (Lille), and lecturer at the Edwards School of Business (University of Saskatchewan).
+- Former postdoctoral fellow at the [Ivey Business School](https://www.ivey.uwo.ca/) ([Western University](https://www.uwo.ca/)) and at [IESEG School of Management](https://www.ieseg.fr/en/) (Lille), and lecturer at the [Edwards School of Business](https://edwards.usask.ca/) ([University of Saskatchewan](https://www.usask.ca/)).
 - Main research specialties:
   - Efficiency and productivity analysis: Data Envelopment Analysis, benchmarking, ranking and target setting;
   - Nonconvex production modeling, plant capacity, scale economies and cost and revenue functions;
