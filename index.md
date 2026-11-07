@@ -1,7 +1,6 @@
 ---
 layout: home
 title: Home
-name: Jafar Sadeghi
 job_title: Assistant Professor of Mathematics & Operations Research
 affiliation: Department of Mathematics and Computer Science, Royal Military
   College of Canada, Kingston
@@ -10,6 +9,10 @@ portrait: /img/portrait.jpg
 google_scholar: https://scholar.google.com/citations?user=fgMe6FAAAAAJ&hl=en
 orcid: https://orcid.org/0000-0002-0055-6493
 email: sadeghi@rmc.ca
+extra_links:
+  - label: RMC profile
+    icon: fa-university
+    url: https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-jafar-sadeghi
 interests:
   - Efficiency and productivity analysis (including capacity measurement)
   - Nonconvex production frontiers
