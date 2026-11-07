@@ -93,9 +93,7 @@ content:
   list: true
   fields:
   - name: authors
-    label: Authors (e.g. K. Kerstens
-    J. Sadeghi: null
-    and X. Tao): null
+    label: Authors (e.g. K. Kerstens and J. Sadeghi)
     type: string
     required: true
   - name: title
@@ -115,8 +113,7 @@ content:
     label: Note (e.g. Forthcoming)
     type: string
   - name: link
-    label: Link / DOI (optional
-    full web address): null
+    label: Link or DOI (optional)
     type: string
   - name: hide
     label: Hide from website (keeps it saved here)
@@ -129,9 +126,7 @@ content:
   list: true
   fields:
   - name: authors
-    label: Authors (e.g. K. Kerstens
-    J. Sadeghi: null
-    and X. Tao): null
+    label: Authors (e.g. K. Kerstens and J. Sadeghi)
     type: string
     required: true
   - name: title
@@ -151,8 +146,7 @@ content:
     label: Note (e.g. Forthcoming)
     type: string
   - name: link
-    label: Link / DOI (optional
-    full web address): null
+    label: Link or DOI (optional)
     type: string
   - name: hide
     label: Hide from website (keeps it saved here)
@@ -165,9 +159,7 @@ content:
   list: true
   fields:
   - name: authors
-    label: Authors (e.g. K. Kerstens
-    J. Sadeghi: null
-    and X. Tao): null
+    label: Authors (e.g. K. Kerstens and J. Sadeghi)
     type: string
     required: true
   - name: title
@@ -187,8 +179,7 @@ content:
     label: Note (e.g. Forthcoming)
     type: string
   - name: link
-    label: Link / DOI (optional
-    full web address): null
+    label: Link or DOI (optional)
     type: string
   - name: hide
     label: Hide from website (keeps it saved here)
@@ -201,9 +192,7 @@ content:
   list: true
   fields:
   - name: authors
-    label: Authors (e.g. K. Kerstens
-    J. Sadeghi: null
-    and X. Tao): null
+    label: Authors (e.g. K. Kerstens and J. Sadeghi)
     type: string
     required: true
   - name: title
@@ -223,8 +212,7 @@ content:
     label: Note (e.g. Forthcoming)
     type: string
   - name: link
-    label: Link / DOI (optional
-    full web address): null
+    label: Link or DOI (optional)
     type: string
   - name: hide
     label: Hide from website (keeps it saved here)
@@ -254,7 +242,6 @@ content:
         required: true
       - name: degree
         label: Degree (e.g. MSc
-        PhD): null
         type: string
       - name: project
         label: Project title
@@ -279,7 +266,6 @@ content:
       required: true
     - name: degree
       label: Degree (e.g. MSc
-      PhD): null
       type: string
     - name: project
       label: Project title
