@@ -11,7 +11,7 @@ layout: default
       <div class="portrait" style="background-image: url('{{ page.portrait | default: '/img/portrait.jpg' | relative_url }}');"></div>
 
       <div class="portrait-title">
-        <h2 itemprop="name">{{ page.name }}</h2>
+        <h2 itemprop="name">{{ page.full_name | default: site.data.settings.site_name | default: site.title }}</h2>
         <h3 itemprop="jobTitle">{{ page.job_title }}</h3>
         <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
           <a href="{{ page.affiliation_url }}" target="_blank" itemprop="url" rel="noopener">
