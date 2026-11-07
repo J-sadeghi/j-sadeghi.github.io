@@ -1,0 +1,8 @@
+<table>
+{% for item in include.items %}
+<tr valign="top">
+<td align="right" class="bibtexnumber">[{{ forloop.index }}]</td>
+<td class="bibtexitem">{% include bibitem.html item=item %}</td>
+</tr>
+{% endfor %}
+</table>

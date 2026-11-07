@@ -1,0 +1,109 @@
+---
+layout: default
+---
+<section id="about" class="home-section">
+  <div class="container">
+
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <div class="col-xs-12 col-md-4">
+    <div id="profile">
+
+      <div class="portrait" style="background-image: url('{{ page.portrait | default: '/img/portrait.jpg' | relative_url }}');"></div>
+
+      <div class="portrait-title">
+        <h2 itemprop="name">{{ page.name }}</h2>
+        <h3 itemprop="jobTitle">{{ page.job_title }}</h3>
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <a href="{{ page.affiliation_url }}" target="_blank" itemprop="url" rel="noopener">
+            <span itemprop="name">{{ page.affiliation }}</span>
+          </a>
+        </h3>
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+        {% if page.google_scholar and page.google_scholar != "" %}
+        <li><a itemprop="sameAs" href="{{ page.google_scholar }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar big-icon"></i></a></li>
+        {% endif %}
+        {% if page.orcid and page.orcid != "" %}
+        <li><a itemprop="sameAs" href="{{ page.orcid }}" target="_blank" rel="noopener"><i class="ai ai-orcid big-icon"></i></a></li>
+        {% endif %}
+        {% if page.researchgate and page.researchgate != "" %}
+        <li><a itemprop="sameAs" href="{{ page.researchgate }}" target="_blank" rel="noopener"><i class="ai ai-researchgate big-icon"></i></a></li>
+        {% endif %}
+        {% if page.linkedin and page.linkedin != "" %}
+        <li><a itemprop="sameAs" href="{{ page.linkedin }}" target="_blank" rel="noopener"><i class="fa fa-linkedin big-icon"></i></a></li>
+        {% endif %}
+        {% if page.email and page.email != "" %}
+        <li><a href="mailto:{{ page.email }}"><i class="fa fa-envelope big-icon"></i></a></li>
+        {% endif %}
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8" itemprop="description">
+
+<h1 id="short-biography">Short Biography</h1>
+
+{{ content }}
+
+{% if page.cv and page.cv != "" %}<p>Complete <a href="{{ page.cv | relative_url }}" target="_blank">Curriculum Vitae</a></p>{% endif %}
+
+    <div class="row">
+
+      <div class="col-sm-5">
+        <h3>Interests</h3>
+        <ul class="ul-interests">
+          {% for i in page.interests %}<li>{{ i }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-sm-7">
+        <h3>Education</h3>
+        <ul class="ul-edu fa-ul">
+          {% for e in page.education %}
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">{{ e.degree }}</p>
+              <p class="institution">{{ e.institution }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section id="contact" class="home-section">
+  <div class="container">
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Contact</h1>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <ul class="fa-ul" itemscope>
+      {% if page.contact.email_display and page.contact.email_display != "" %}
+      <li><i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i><span id="person-email" itemprop="email">{{ page.contact.email_display }}</span></li>
+      {% endif %}
+      {% if page.contact.department and page.contact.department != "" %}
+      <li><i class="fa-li fa fa-university fa-2x" aria-hidden="true"></i><span>{{ page.contact.department }}</span></li>
+      {% endif %}
+      {% if page.contact.address and page.contact.address != "" %}
+      <li><i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i><span id="person-address" itemprop="address">{{ page.contact.address }}</span></li>
+      {% endif %}
+      {% if page.contact.hours and page.contact.hours != "" %}
+      <li><i class="fa-li fa fa-clock-o fa-2x" aria-hidden="true"></i><span>{{ page.contact.hours }}</span></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+
+  </div>
+</section>

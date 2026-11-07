@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+      &copy; {{ site.copyright_start }} {{ site.title }}. Latest update: {{ site.time | date: "%B %Y" }} &middot;
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon"><i class="fa fa-chevron-up fa-2x"></i></span>
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<script src="{{ '/assets/jquery.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/bootstrap/js/bootstrap.min.js' | relative_url }}"></script>
+<script>
+  $(function () {
+    function scrollToHash(hash) {
+      var $t = $(hash);
+      if ($t.length) {
+        $('html, body').animate({ scrollTop: $t.offset().top - $('#navbar-main').outerHeight() + 1 }, 800);
+        return true;
+      }
+      return false;
+    }
+    $('#navbar-main a[href*="#"]').on('click', function (e) {
+      var hash = this.hash;
+      if (hash && location.pathname.replace(/index\.html$/, '') === this.pathname.replace(/index\.html$/, '') && scrollToHash(hash)) {
+        e.preventDefault();
+        $('.navbar-collapse').collapse('hide');
+      }
+    });
+    $('#back_to_top').on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 800);
+    });
+  });
+</script>

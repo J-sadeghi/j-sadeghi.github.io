@@ -1,0 +1,22 @@
+sections:
+- heading: Graduate Students
+  members:
+  - name: Allyson Jones
+    degree: MSc
+    project: ""
+    details: Royal Military College of Canada
+- heading: Undergraduate Research Students (NSERC USRA and Research Assistants)
+  members:
+  - name: Wilby Linden
+    degree: ""
+    project: "Visualization of production frontiers in DEA: 2D and 3D computational tools"
+    details: NSERC USRA, 2026; research assistant, 2025 (NSERC-funded)
+  - name: Emily Wu
+    degree: ""
+    project: Nonconvex analysis and optimization
+    details: Research assistant, 2025 (NSERC-funded)
+  - name: Joseph Gray
+    degree: ""
+    project: Data collection, model development and analysis for logistics optimization
+    details: Research assistant, 2025 (STRN-funded)
+alumni: []

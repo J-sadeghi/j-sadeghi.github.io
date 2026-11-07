@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="{{ site.title }}">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/bootstrap/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/academicons/css/academicons.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/font-awesome/css/font-awesome.min.css' | relative_url }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto+Mono">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/img/icon.png' | relative_url }}">
+  <title>{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+</head>

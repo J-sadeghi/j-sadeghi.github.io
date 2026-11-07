@@ -1,0 +1,30 @@
+---
+layout: page
+---
+{% assign g = site.data.group %}
+<h2 id="current">Current Members</h2>
+{% for section in g.sections %}
+{% if section.members and section.members.size > 0 %}
+<h3>{{ section.heading }}</h3>
+<table>
+{% for m in section.members %}
+<tr valign="top">
+<td align="right" class="bibtexnumber">[{{ forloop.index }}]</td>
+<td class="bibtexitem">{{ m.name }}{% if m.degree and m.degree != "" %} ({{ m.degree }}){% endif %}.{% if m.project and m.project != "" %} <em>{{ m.project }}</em>.{% endif %}{% if m.details and m.details != "" %} {{ m.details }}.{% endif %}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+{% endfor %}
+{% if g.alumni and g.alumni.size > 0 %}
+<h2 id="alumni">Former Members</h2>
+<table>
+{% for m in g.alumni %}
+<tr valign="top">
+<td align="right" class="bibtexnumber">[{{ forloop.index }}]</td>
+<td class="bibtexitem">{{ m.name }}{% if m.degree and m.degree != "" %} ({{ m.degree }}){% endif %}.{% if m.project and m.project != "" %} <em>{{ m.project }}</em>.{% endif %}{% if m.details and m.details != "" %} {{ m.details }}.{% endif %}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+{{ content }}

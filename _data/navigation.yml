@@ -1,0 +1,29 @@
+- title: Home
+  url: "/#about"
+  children: []
+- title: Research
+  url: ""
+  children:
+  - title: Journal Articles
+    url: /post/articles/
+  - title: Preprints
+    url: /post/preprints/
+  - title: Conference Papers
+    url: /post/conferences/
+  - title: Research Group
+    url: /post/group/
+- title: Teaching
+  url: /post/courses/
+  children: []
+- title: Services
+  url: ""
+  children:
+  - title: Refereeing
+    url: /post/refereeing/
+  - title: Memberships
+    url: /post/memberships/
+  - title: Responsibilities
+    url: /post/responsibilities/
+- title: Contact
+  url: "/#contact"
+  children: []

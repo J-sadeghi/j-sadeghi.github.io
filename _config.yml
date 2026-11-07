@@ -1,0 +1,21 @@
+# Site settings (edit in Pages CMS under "Site settings" or here)
+title: Jafar Sadeghi
+description: Assistant Professor, Department of Mathematics and Computer Science, Royal Military College of Canada
+url: https://j-sadeghi.github.io
+baseurl: ""
+copyright_start: 2026
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      layout: page
+      permalink: /post/:basename/

@@ -1,0 +1,10 @@
+{% include head.html %}
+<body id="top"{% if page.layout == 'home' %} data-spy="scroll" data-target="#navbar-main" data-offset="71"{% endif %}>
+
+{% include navbar.html %}
+
+{{ content }}
+
+{% include footer.html %}
+</body>
+</html>
